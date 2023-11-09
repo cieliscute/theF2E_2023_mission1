@@ -2,7 +2,23 @@
 export default {
   content: ["./pages/**/*.html", "./layout/**/*.ejs", "./main.js"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: "#4527A0",
+          lighter: "#5b35ce",
+          darker: "301b70",
+        },
+        secondary: {
+          blue: "#26A69A",
+          yellow: "#FFB300",
+          pink: "#EC407A",
+        },
+      },
+    },
+    container: {
+      center: true,
+    },
   },
-  plugins: [],
+  plugins: [require("tw-elements/dist/plugin.cjs")],
 };
